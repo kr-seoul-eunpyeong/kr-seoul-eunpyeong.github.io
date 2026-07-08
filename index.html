@@ -117,35 +117,327 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "은평구는 2023년 기준 약 46만 6천 명이 거주하고 21만 세대가 자리한 서울의 대표적인 정주형 자치구로, 16개 행정동과 11개 법정동으로 나뉜다. 대규모 아파트 단지와 다세대 주택이 밀집한 주거 중심 도시인 만큼 대공장이나 대규모 업무지구보다는 생활 밀착형 근린 상권이 촘촘하게 발달했다. 연신내 로데오거리와 불광 상권이 소비 활동의 중심축을 이루고, 롯데몰 은평점 같은 대형 유통시설이 이를 뒷받침한다. 다른 서울 자치구에 비해 녹지 비율이 높고 개발제한구역이 넓어 도심과 전원의 성격이 공존하는 점이 두드러진다. 은평뉴타운 조성 이후 젊은 가족과 3040 세대의 유입이 늘면서 도서관·문화시설 같은 생활 인프라 확충에도 힘이 실리고 있다.",
+  "coords": {
+    "lat": 37.6027,
+    "lng": 126.9291
+  },
+  "cultural_heritage": [
+    {
+      "description": "은평한옥마을에 자리한 구립 박물관으로, 은평의 역사와 뉴타운 발굴 유물, 한옥의 건축 과정을 상설전시로 소개한다.",
+      "name": "은평역사한옥박물관"
+    },
+    {
+      "description": "한옥체험관을 리모델링해 2015년 문을 연 무료 문학 공간으로, 시인 천상병·화가 중광·작가 이외수 세 예술가의 작품과 원고를 전시한다.",
+      "name": "셋이서문학관"
+    },
+    {
+      "description": "가을밤 북한산 자락 진관사에서 열리는 전통·국악 중심의 야외 음악회로, 사찰의 고즈넉한 분위기 속에서 공연을 즐길 수 있다.",
+      "name": "진관사 산사음악회"
+    },
+    {
+      "description": "구파발의 옛 파발 문화를 재현하는 지역 축제로, 1996년부터 이어져 온 은평의 대표 전통 문화 행사다.",
+      "name": "파발제"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "서울 지하철 6호선 응암역·독바위역 또는 3호선 불광역에서 가까우며, 통일로를 지나는 다수의 시내버스로도 접근할 수 있습니다.",
+      "question": "은평구청까지 대중교통으로 어떻게 가나요?"
+    },
+    {
+      "answer": "북한산 자락의 천년 고찰 진관사와 진관동 은평한옥마을이 대표 명소이며, 봉산 편백나무 숲과 불광천 산책로도 함께 즐기기 좋습니다.",
+      "question": "은평구의 대표 명소는 어디인가요?"
+    },
+    {
+      "answer": "GTX-A 연신내역은 2024년 12월 28일 개통하여 서울역까지 약 5분대에 이동할 수 있으며, 기존 3호선·6호선과 함께 환승역으로 이용됩니다.",
+      "question": "GTX-A 연신내역은 언제 개통했나요?"
+    },
+    {
+      "answer": "오전 9시부터 오후 6시까지 운영하며 입장은 오후 5시까지 가능하고, 매주 월요일과 설날·추석 연휴에는 휴관합니다.",
+      "question": "은평역사한옥박물관 관람 정보는 어떻게 되나요?"
+    },
+    {
+      "answer": "봉산 편백나무 무장애숲길과 불광천 산책로가 부담 없이 걷기 좋으며, 본격적인 산행은 북한산 둘레길과 백련산 은평둘레길을 추천합니다.",
+      "question": "은평구에서 가볍게 산책하거나 등산하기 좋은 곳은 어디인가요?"
+    },
+    {
+      "answer": "봄에는 불광천 벚꽃축제, 가을에는 은평누리축제와 구파발 전통을 재현하는 파발제가 열려 구민과 방문객이 함께 즐깁니다.",
+      "question": "은평구의 대표 축제로는 무엇이 있나요?"
+    }
+  ],
+  "geography_nature": "은평구는 서울 북서부에 자리하며 동쪽으로 종로구·서대문구, 남쪽으로 마포구와 접하고, 북쪽과 서쪽으로는 경기도 고양시 덕양구와 경계를 이룬다. 구의 북쪽에는 해발 836미터의 북한산이 우뚝 솟아 비봉과 향로봉으로 이어지는 능선을 형성하며 국립공원 구역을 품는다. 남서부에는 백련산(215미터), 봉산(209미터), 앵봉산 같은 야트막한 야산이 도심 녹지축을 이루어 주민들의 일상 산행지가 되어 준다. 구를 가로지르는 불광천은 한강으로 흘러드는 지방하천으로, 생태 복원을 거쳐 산책로와 봄철 벚꽃 명소로 사랑받는다. 진관동과 서오릉로 일대 상당 부분이 개발제한구역으로 묶여 있어 도심 인근에서도 숲과 습지 같은 자연이 비교적 온전하게 남아 있다.",
+  "history": "은평구는 1979년 10월 1일 서대문구에서 갈라져 나와 서울의 열여섯 번째 자치구로 신설되었다. '은평'이라는 이름은 조선시대 이 일대에 있던 연은방과 상평방의 글자를 따온 것으로 전해진다. 구파발은 한양 도성에서 의주로 향하는 파발과 역참이 놓여 있던 교통 요지였고, 봉산과 앵봉산 정상의 봉수대는 변방의 소식을 도성에 전하던 통신 거점이었다. 광복 이후 서울이 팽창하면서 대규모 주거지로 빠르게 성장하였으며, 2004년부터 진행된 은평뉴타운 조성 사업을 거치며 진관동 일대의 경관과 인구 구성이 크게 달라졌다. 뉴타운 발굴 과정에서 다량의 유물이 출토되어 은평역사한옥박물관 상설전시로 이어지기도 했다.",
+  "intro": "은평구는 서울특별시 북서부 끝자락에 위치한 자치구로, 북한산 능선과 불광천 물길을 함께 품은 대표적인 주거 지역이다. 옛 구파발이 의주로 향하던 관문이었던 만큼 예로부터 사람과 물자가 오가던 길목이었고, 오늘날에는 은평뉴타운과 진관동 한옥마을이 어우러진 독특한 경관을 이룬다. 연신내와 불광을 축으로 하는 촘촘한 생활 상권 덕분에 정주 여건이 좋아 가족 단위 거주지로 인기가 높다. 천년 고찰 진관사와 봉산 편백나무 숲처럼 도심에서 보기 드문 자연·문화 자원이 가까이 있어 사계절 나들이객의 발길이 이어진다.",
+  "landmarks": [
+    {
+      "description": "북한산 자락에 자리한 고려 현종 때 창건된 천년 고찰로, 가을 산사음악회와 이름난 사찰음식으로 널리 알려져 있다.",
+      "name": "진관사"
+    },
+    {
+      "description": "진관동 북한산 초입에 조성된 현대 한옥 단지로, 전통 건축과 자연 경관이 어우러진 대표적인 문화 관광 명소다.",
+      "name": "은평한옥마을"
+    },
+    {
+      "description": "연신내역 일대에 형성된 은평 최대의 상업·문화 거리로, 젊은 층이 즐겨 찾는 먹거리와 쇼핑의 중심지다.",
+      "name": "연신내 로데오거리"
+    },
+    {
+      "description": "은평뉴타운 인근에 들어선 복합 쇼핑몰로, 백화점·마트·영화관을 갖춰 지역 생활 소비를 뒷받침한다.",
+      "name": "롯데몰 은평점"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "은평 구간을 지나는 저지대 순환 탐방로로, 도심에서 손쉽게 북한산 숲길을 걸을 수 있는 대표 걷기 코스다.",
+      "name": "북한산 둘레길"
+    },
+    {
+      "description": "봉산 자락에 1만 2천여 그루의 편백나무가 조성된 도심 속 치유의 숲으로, 새절역 인근에서 이어지는 무장애 데크길이 유명하다.",
+      "name": "봉산 편백나무 숲"
+    },
+    {
+      "description": "생태하천으로 복원된 불광천을 따라 이어지는 산책·자전거길로, 봄이면 벚꽃축제가 열려 지역 주민의 대표 쉼터가 된다.",
+      "name": "불광천 산책로"
+    },
+    {
+      "description": "봉산과 앵봉산을 잇는 서울둘레길 코스로, 팥배나무 군락과 편백숲을 지나며 가벼운 트레킹을 즐길 수 있다.",
+      "name": "서울둘레길 봉산·앵봉산 구간"
+    },
+    {
+      "description": "높이 215미터의 백련산을 오르는 은평둘레길 구간으로, 산골고개 생태연결로에서 시작해 큰 부담 없이 도심 조망을 즐길 수 있다.",
+      "name": "백련산 은평둘레길"
+    }
+  ],
+  "org_slug": "kr-seoul-eunpyeong",
+  "sido": "서울특별시",
+  "sigungu": "은평구",
+  "symbols": {
+    "bird": "비둘기",
+    "flower": "코스모스",
+    "tree": "대추나무"
+  },
+  "transport": "은평구에는 서울 지하철 3호선과 6호선이 남북으로 지나며 연신내역, 불광역, 구파발역, 녹번역, 새절역이 주요 이용 거점이다. 서북부 관문인 디지털미디어시티역과 수색역에서는 수도권 전철 경의·중앙선과 인천국제공항철도, 공항버스가 연결되어 도심과 인천공항 접근이 편리하다. 2024년 12월 수도권 광역급행철도 GTX-A가 연신내역에 개통하면서 서울역까지 이동 시간이 5분대로 단축되어, 연신내역은 3호선·6호선·GTX가 만나는 서북부 교통 허브로 떠올랐다. 도로로는 통일로와 서오릉로가 남북을 잇는 간선축을 이루고, 내부순환로와 수색로가 도심 및 강북·강서 방면 이동을 뒷받침한다. 여기에 향후 GTX-E 노선 경유까지 검토되고 있어 광역 교통 여건은 한층 개선될 전망이다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">서울특별시</p>
-      <h1>은평구</h1>
+<style>
+  :root{
+    --ep-wood:#8B7355;
+    --ep-wood-deep:#5f4e39;
+    --ep-wood-light:#a68a68;
+    --ep-sage:#8FBC8F;
+    --ep-sage-deep:#5f8a63;
+    --ep-hanji:#f6efe1;
+    --ep-hanji-dim:#efe5d1;
+    --ep-ink:#33291d;
+    --ep-line:rgba(139,115,85,.28);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+  #ep-root{
+    font-family:"Noto Serif KR","백제 명조",serif;
+    color:var(--ep-ink);
+    line-height:1.9;
+    background:var(--ep-hanji);
+    background-image:
+      radial-gradient(rgba(139,115,85,.05) 1px,transparent 1px);
+    background-size:22px 22px;
+    -webkit-font-smoothing:antialiased;
+  }
+  #ep-root *{box-sizing:border-box;}
+
+  /* ===== 도어 오버레이 (JS 켜졌을 때만 표시) ===== */
+  .ep-doorstage{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(180deg,#2a2118 0%,#3a2e20 100%);
+  }
+  .ep-door{
+    position:absolute;
+    top:0;bottom:0;
+    width:50%;
+    background:
+      repeating-linear-gradient(90deg,var(--ep-wood) 0 3px,transparent 3px 44px),
+      repeating-linear-gradient(0deg,var(--ep-wood) 0 3px,transparent 3px 44px),
+      linear-gradient(135deg,var(--ep-hanji) 0%,var(--ep-hanji-dim) 100%);
+    box-shadow:inset 0 0 0 10px var(--ep-wood), inset 0 0 60px rgba(95,78,57,.25);
+    transition:transform 1.4s cubic-bezier(.76,0,.24,1);
+    z-index:5;
+    will-change:transform;
+  }
+  .ep-door.left{left:0;border-right:5px solid var(--ep-wood-deep);}
+  .ep-door.right{right:0;border-left:5px solid var(--ep-wood-deep);}
+  .ep-doorstage.open .ep-door.left{transform:translateX(-102%);}
+  .ep-doorstage.open .ep-door.right{transform:translateX(102%);}
+
+  .ep-handle{
+    position:absolute;top:50%;width:12px;height:64px;
+    border-radius:8px;background:var(--ep-wood-deep);
+    box-shadow:0 0 0 3px rgba(0,0,0,.15);transform:translateY(-50%);
+  }
+  .ep-door.left .ep-handle{right:26px;}
+  .ep-door.right .ep-handle{left:26px;}
+
+  .ep-portal{
+    position:relative;z-index:2;text-align:center;color:var(--ep-hanji);
+    padding:2rem;max-width:640px;
+    transition:opacity .8s ease .3s;
+  }
+  .ep-doorstage.open .ep-portal{opacity:0;pointer-events:none;}
+  .ep-portal .seal{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:78px;height:78px;border-radius:50%;
+    border:2px solid var(--ep-sage);color:var(--ep-sage);
+    font-size:15px;letter-spacing:.15em;margin-bottom:1.4rem;
+    background:rgba(143,188,143,.08);
+  }
+  .ep-portal h1{
+    font-size:clamp(30px,6vw,54px);font-weight:600;margin:.2rem 0 .6rem;
+    letter-spacing:.04em;color:var(--ep-hanji);line-height:1.35;
+  }
+  .ep-portal .sub{font-size:16px;color:rgba(246,239,225,.78);font-weight:300;margin-bottom:2rem;}
+  .ep-open-btn{
+    font-family:inherit;cursor:pointer;
+    background:var(--ep-sage);color:#26331f;border:none;
+    padding:.85rem 2.4rem;font-size:16px;border-radius:40px;
+    letter-spacing:.08em;transition:transform .2s ease,background .2s ease;
+  }
+  .ep-open-btn:hover{transform:translateY(-2px);background:#a3cca3;}
+  .ep-hint{margin-top:1.1rem;font-size:13px;color:rgba(246,239,225,.55);animation:epPulse 2.4s infinite;}
+  @keyframes epPulse{0%,100%{opacity:.4}50%{opacity:.95}}
+
+  /* ===== 콘텐츠 마당 ===== */
+  .ep-yard{max-width:920px;margin:0 auto;padding:clamp(2rem,6vw,5rem) clamp(1.1rem,4vw,2.6rem);}
+
+  .ep-eaves{
+    text-align:center;margin-bottom:3rem;position:relative;padding-bottom:1.4rem;
+  }
+  .ep-eaves::after{
+    content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:120px;height:3px;background:var(--ep-sage);border-radius:3px;
+  }
+  .ep-eaves .kr{font-size:13px;letter-spacing:.4em;color:var(--ep-wood);text-indent:.4em;}
+  .ep-eaves h1{font-size:clamp(26px,5vw,40px);font-weight:600;margin:.5rem 0;letter-spacing:.05em;}
+  .ep-eaves p{max-width:620px;margin:.6rem auto 0;color:#5c4e3a;font-weight:300;font-size:16px;}
+
+  /* 섹션 카드 — 문틀 프레임 감성 */
+  #ep-content section{
+    background:linear-gradient(180deg,#fffdf8 0%,#fbf5e9 100%);
+    border:1px solid var(--ep-line);
+    border-radius:4px;
+    padding:1.9rem clamp(1.2rem,3vw,2.2rem);
+    margin:0 0 1.5rem;
+    position:relative;
+    box-shadow:0 1px 0 rgba(255,255,255,.6) inset;
+  }
+  /* 문살 상단 장식 */
+  #ep-content section::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:6px;
+    background:
+      repeating-linear-gradient(90deg,var(--ep-wood) 0 2px,transparent 2px 18px);
+    opacity:.5;border-radius:4px 4px 0 0;
+  }
+  #ep-content section h2{
+    font-family:inherit;font-size:22px;font-weight:600;margin:0 0 1rem;
+    color:var(--ep-wood-deep);letter-spacing:.03em;
+    display:flex;align-items:center;gap:.6rem;
+  }
+  #ep-content section h2::before{
+    content:"";width:14px;height:14px;flex:0 0 auto;
+    background:var(--ep-sage);
+    transform:rotate(45deg);border-radius:2px;
+  }
+  #ep-content section h3{font-family:inherit;font-size:17px;font-weight:500;color:var(--ep-wood-deep);margin:1.2rem 0 .5rem;}
+  #ep-content section p{margin:.5rem 0;color:#40352a;}
+  #ep-content a{color:var(--ep-sage-deep);text-decoration:none;border-bottom:1px solid rgba(95,138,99,.4);}
+  #ep-content a:hover{color:var(--ep-wood);}
+
+  /* facts / symbols 그리드 */
+  #ep-content .facts,#ep-content .symbols{
+    list-style:none;padding:0;margin:1rem 0 0;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.7rem;
+  }
+  #ep-content .facts li,#ep-content .symbols li,
+  #ep-content .facts dd,#ep-content .facts dt{
+    background:#fff;border:1px solid var(--ep-line);border-radius:3px;
+    padding:.7rem .9rem;font-size:15px;color:#463a2c;
+  }
+  #ep-content .facts dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.7rem;margin:1rem 0 0;}
+  #ep-content .symbols li{border-left:3px solid var(--ep-sage);}
+
+  /* faq — 문 여닫이 details */
+  #ep-content .faq details,#ep-content details{
+    border:1px solid var(--ep-line);border-radius:3px;margin:.6rem 0;background:#fff;overflow:hidden;
+  }
+  #ep-content .faq summary,#ep-content details summary{
+    cursor:pointer;padding:.85rem 1.1rem;font-weight:500;color:var(--ep-wood-deep);
+    list-style:none;position:relative;padding-right:2.4rem;background:linear-gradient(180deg,#fffdf8,#faf3e6);
+  }
+  #ep-content .faq summary::-webkit-details-marker{display:none;}
+  #ep-content .faq summary::after,#ep-content details summary::after{
+    content:"⌂";position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+    color:var(--ep-sage-deep);transition:transform .35s ease;font-size:15px;
+  }
+  #ep-content .faq details[open] summary::after,#ep-content details[open] summary::after{transform:translateY(-50%) rotate(90deg);}
+  #ep-content .faq details p,#ep-content details p{padding:.2rem 1.1rem 1rem;margin:0;color:#463a2c;}
+
+  #ep-content #links ul,#ep-content #sources ul{list-style:none;padding:0;margin:.6rem 0 0;}
+  #ep-content #links li,#ep-content #sources li{padding:.35rem 0 .35rem 1.2rem;position:relative;}
+  #ep-content #links li::before,#ep-content #sources li::before{
+    content:"";position:absolute;left:0;top:.85rem;width:7px;height:7px;
+    background:var(--ep-wood-light);transform:rotate(45deg);
+  }
+
+  .ep-footer{text-align:center;margin-top:2.5rem;padding-top:1.6rem;border-top:1px solid var(--ep-line);color:#7a6a54;font-size:13px;letter-spacing:.05em;}
+
+  @media (max-width:600px){
+    #ep-content section{padding:1.4rem 1.1rem;}
+    .ep-door{background-size:auto,auto,cover;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .ep-door{transition:transform .01s;}
+  }
+</style>
+
+<div id="ep-root">
+  <script type="application/json" id="region-data">
+  {
+    "sido":"서울특별시","sigungu":"은평구","org_slug":"kr-seoul-eunpyeong",
+    "intro":"은평구는 서울특별시 북서부 끝자락에 위치한 자치구로, 북한산 능선과 불광천 물길을 함께 품은 대표적인 주거 지역이다. 옛 구파발이 의주로 향하던 관문이었던 만큼 예로부터 사람과 물자가 오가던 길목이었고, 오늘날에는 은평뉴타운과 진관동 한옥마을이 어우러진 독특한 경관을 이룬다. 연신내와 불광을 축으로 하는 촘촘한 생활 상권 덕분에 정주 여건이 좋아 가족 단위 거주지로 인기가 높다. 천년 고찰 진관사와 봉산 편백나무 숲처럼 도심에서 보기 드문 자연·문화 자원이 가까이 있어 사계절 나들이객의 발길이 이어진다.","history":"은평구는 1979년 10월 1일 서대문구에서 갈라져 나와 서울의 열여섯 번째 자치구로 신설되었다. &#x27;은평&#x27;이라는 이름은 조선시대 이 일대에 있던 연은방과 상평방의 글자를 따온 것으로 전해진다. 구파발은 한양 도성에서 의주로 향하는 파발과 역참이 놓여 있던 교통 요지였고, 봉산과 앵봉산 정상의 봉수대는 변방의 소식을 도성에 전하던 통신 거점이었다. 광복 이후 서울이 팽창하면서 대규모 주거지로 빠르게 성장하였으며, 2004년부터 진행된 은평뉴타운 조성 사업을 거치며 진관동 일대의 경관과 인구 구성이 크게 달라졌다. 뉴타운 발굴 과정에서 다량의 유물이 출토되어 은평역사한옥박물관 상설전시로 이어지기도 했다.",
+    "geography_nature":"은평구는 서울 북서부에 자리하며 동쪽으로 종로구·서대문구, 남쪽으로 마포구와 접하고, 북쪽과 서쪽으로는 경기도 고양시 덕양구와 경계를 이룬다. 구의 북쪽에는 해발 836미터의 북한산이 우뚝 솟아 비봉과 향로봉으로 이어지는 능선을 형성하며 국립공원 구역을 품는다. 남서부에는 백련산(215미터), 봉산(209미터), 앵봉산 같은 야트막한 야산이 도심 녹지축을 이루어 주민들의 일상 산행지가 되어 준다. 구를 가로지르는 불광천은 한강으로 흘러드는 지방하천으로, 생태 복원을 거쳐 산책로와 봄철 벚꽃 명소로 사랑받는다. 진관동과 서오릉로 일대 상당 부분이 개발제한구역으로 묶여 있어 도심 인근에서도 숲과 습지 같은 자연이 비교적 온전하게 남아 있다.","characteristics":"은평구는 2023년 기준 약 46만 6천 명이 거주하고 21만 세대가 자리한 서울의 대표적인 정주형 자치구로, 16개 행정동과 11개 법정동으로 나뉜다. 대규모 아파트 단지와 다세대 주택이 밀집한 주거 중심 도시인 만큼 대공장이나 대규모 업무지구보다는 생활 밀착형 근린 상권이 촘촘하게 발달했다. 연신내 로데오거리와 불광 상권이 소비 활동의 중심축을 이루고, 롯데몰 은평점 같은 대형 유통시설이 이를 뒷받침한다. 다른 서울 자치구에 비해 녹지 비율이 높고 개발제한구역이 넓어 도심과 전원의 성격이 공존하는 점이 두드러진다. 은평뉴타운 조성 이후 젊은 가족과 3040 세대의 유입이 늘면서 도서관·문화시설 같은 생활 인프라 확충에도 힘이 실리고 있다.",
+    "transport":"은평구에는 서울 지하철 3호선과 6호선이 남북으로 지나며 연신내역, 불광역, 구파발역, 녹번역, 새절역이 주요 이용 거점이다. 서북부 관문인 디지털미디어시티역과 수색역에서는 수도권 전철 경의·중앙선과 인천국제공항철도, 공항버스가 연결되어 도심과 인천공항 접근이 편리하다. 2024년 12월 수도권 광역급행철도 GTX-A가 연신내역에 개통하면서 서울역까지 이동 시간이 5분대로 단축되어, 연신내역은 3호선·6호선·GTX가 만나는 서북부 교통 허브로 떠올랐다. 도로로는 통일로와 서오릉로가 남북을 잇는 간선축을 이루고, 내부순환로와 수색로가 도심 및 강북·강서 방면 이동을 뒷받침한다. 여기에 향후 GTX-E 노선 경유까지 검토되고 있어 광역 교통 여건은 한층 개선될 전망이다."
+  }
+  </script>
+
+  <div class="ep-doorstage" id="ep-doorstage" aria-hidden="true">
+    <div class="ep-door left"><span class="ep-handle"></span></div>
+    <div class="ep-door right"><span class="ep-handle"></span></div>
+    <div class="ep-portal">
+      <span class="seal">恩平</span>
+      <h1>서울특별시 은평구</h1>
+      <p class="sub">한옥의 문창살이 열리면, 은평구의 이야기가 펼쳐집니다</p>
+      <button class="ep-open-btn" id="ep-open" type="button">대문 열기 &nbsp;›‹</button>
+      <p class="ep-hint">스크롤하거나 대문을 클릭해 안으로 드세요</p>
+    </div>
+  </div>
+
+  <main class="ep-yard" id="ep-yard">
+    <header class="ep-eaves">
+      <div class="kr">kr-seoul-eunpyeong</div>
+      <h1>은평구 지역 정보 · 서울특별시</h1>
+      <p>은평구는 서울특별시 북서부 끝자락에 위치한 자치구로, 북한산 능선과 불광천 물길을 함께 품은 대표적인 주거 지역이다. 옛 구파발이 의주로 향하던 관문이었던 만큼 예로부터 사람과 물자가 오가던 길목이었고, 오늘날에는 은평뉴타운과 진관동 한옥마을이 어우러진 독특한 경관을 이룬다. 연신내와 불광을 축으로 하는 촘촘한 생활 상권 덕분에 정주 여건이 좋아 가족 단위 거주지로 인기가 높다. 천년 고찰 진관사와 봉산 편백나무 숲처럼 도심에서 보기 드문 자연·문화 자원이 가까이 있어 사계절 나들이객의 발길이 이어진다.</p>
     </header>
-    <div class="content">
-      <section id="intro">
+
+    <div id="ep-content">
+            <section id="intro">
         <h2>지역 소개</h2>
         <p>은평구는 서울특별시 북서부 끝자락에 위치한 자치구로, 북한산 능선과 불광천 물길을 함께 품은 대표적인 주거 지역이다. 옛 구파발이 의주로 향하던 관문이었던 만큼 예로부터 사람과 물자가 오가던 길목이었고, 오늘날에는 은평뉴타운과 진관동 한옥마을이 어우러진 독특한 경관을 이룬다. 연신내와 불광을 축으로 하는 촘촘한 생활 상권 덕분에 정주 여건이 좋아 가족 단위 거주지로 인기가 높다. 천년 고찰 진관사와 봉산 편백나무 숲처럼 도심에서 보기 드문 자연·문화 자원이 가까이 있어 사계절 나들이객의 발길이 이어진다.</p>
       </section>
@@ -254,9 +546,51 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
         </ul>
       </section>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 은평구 지역 정보 페이지입니다.</p>
-    </footer>
+
+    <div class="ep-footer">
+      서울특별시 은평구 · 한옥 문살 사이로 만나는 우리 동네 · <a href="https://kr-seoul-eunpyeong.github.io/" style="color:var(--ep-sage-deep);border:none">https://kr-seoul-eunpyeong.github.io/</a>
+    </div>
   </main>
+</div>
+
+<script>
+(function(){
+  var stage=document.getElementById('ep-doorstage');
+  var yard=document.getElementById('ep-yard');
+  var openBtn=document.getElementById('ep-open');
+  if(!stage||!yard)return;
+
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var opened=false;
+
+  function openDoors(){
+    if(opened)return;opened=true;
+    stage.classList.add('open');
+    setTimeout(function(){
+      stage.style.display='none';
+      document.documentElement.style.scrollBehavior='auto';
+      window.scrollTo(0,0);
+    }, reduce?60:1500);
+  }
+
+  if(openBtn)openBtn.addEventListener('click',openDoors);
+  stage.addEventListener('click',function(e){
+    if(e.target.closest('.ep-door'))openDoors();
+  });
+
+  var wheelArmed=false;
+  window.addEventListener('wheel',function(){
+    if(!opened&&!wheelArmed){wheelArmed=true;openDoors();}
+  },{passive:true,once:false});
+  window.addEventListener('touchmove',function(){
+    if(!opened)openDoors();
+  },{passive:true});
+  window.addEventListener('keydown',function(e){
+    if(!opened&&(e.key==='Enter'||e.key===' '||e.key==='ArrowDown'||e.key==='PageDown'))openDoors();
+  });
+
+  setTimeout(function(){var h=document.querySelector('.ep-hint');if(h&&!opened)h.textContent='아무 곳이나 스크롤하면 대문이 열립니다';},6000);
+})();
+</script>
 </body>
 </html>
